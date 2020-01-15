@@ -7,6 +7,7 @@ var city = "Atlanta";
 // Here we are building the URL we need to query the database
 
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + APIKey;
+    var queryURLFive = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + APIKey;
 
 // Here we run our AJAX call to the OpenWeatherMap API
 
@@ -27,7 +28,7 @@ $.ajax({
 
 // Converts the temp to Kelvin with the below formula
 var tempF = (response.main.temp - 273.15) * 1.80 + 32;
-$(".tempF").text("Temperature: " + tempF + " °F");
+$(".tempF").text("Temperature: " + Math.round(tempF) + " °F");
 
 
 });
