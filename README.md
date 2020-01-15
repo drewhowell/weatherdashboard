@@ -6,9 +6,6 @@ Developers are often tasked with retrieving data from another application's API 
 ## Description
 This weather dashboard application has search functionality to find current weather conditions and future weather outlook for multiple cities.
 
-User Story:
-As a traveler, I want to see the weather outlook for multiple cities, so that I can plan a trip accordingly
-
 This app uses the OpenWeather API to retrieve weather data for cities. It runs in the browser and features dynamically updated HTML and CSS powered by jQuery.
 
 It displays the following current weather conditions:
