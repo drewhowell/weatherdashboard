@@ -32,3 +32,20 @@ $(".tempF").text("Temperature: " + Math.round(tempF) + " °F");
 
 
 });
+
+// Use the search field
+
+var searchInput = document.querySelector(".input");
+var searchOutput = document.querySelector(".output");
+var searchButton = document.querySelector(".search");
+
+searchButton.addEventListener("click", searchFunction);
+
+searchOutput.textContent = localStorage.getItem("inputcontent");
+searchInput.textarea.value = localStorage.getItem("inputcontent");
+
+function searchFunction() {
+    localStorage.setItem("inputcontent", searchInput.value);
+
+    searchOutput.textContent = searchInput.textarea.value;
+}
