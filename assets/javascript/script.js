@@ -1,7 +1,7 @@
 // This is our API key
 
 var APIKey = "&appid=a1e01b951a95042a50e99d7d3222a66d";
-var city = "Atlanta";
+var city = localStorage.getItem("inputcontent");
 
 
 // Here we are building the URL we need to query the database
