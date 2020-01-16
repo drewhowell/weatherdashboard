@@ -19,7 +19,6 @@ $.ajax({
     console.log(queryURL);
     console.log(response);
 
-//code will go here
 // Transfer content to HTML
     $(".city").html("<h1>" + response.name + "</h1>");
     $(".icon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>");
@@ -32,6 +31,47 @@ var tempF = (response.main.temp - 273.15) * 1.80 + 32;
 $(".tempF").text("Temperature: " + Math.round(tempF) + " °F");
 
 });
+
+$.ajax({
+    url: queryURLFive,
+    method: "GET"
+})// We store all of the retrieved data inside of an object called "response"
+.then(function(response) {
+    console.log(queryURLFive);
+    console.log(response);
+
+// Transfer day 1 content to HTML
+    $(".day-one-date").html("<h4>" + response.list[0].dt_txt + "</h4>");
+    $(".day-one-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+    $(".day-one-humidity").text("Humidity: " + response.list[0].main.humidity + "%");
+
+// Converts the temp to Kelvin with the below formula
+var tempOne = (response.list[0].main.temp - 273.15) * 1.80 + 32;
+$(".day-one-temp").text("Temp: " + Math.round(tempOne) + " °F");
+
+// Transfer day 2 content to HTML
+$(".day-two-date").html("<h4>" + response.list[8].dt_txt + "</h4>");
+$(".day-two-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[8].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-two-humidity").text("Humidity: " + response.list[8].main.humidity + "%");
+
+// Converts the temp to Kelvin with the below formula
+var tempTwo = (response.list[8].main.temp - 273.15) * 1.80 + 32;
+$(".day-two-temp").text("Temp: " + Math.round(tempTwo) + " °F");
+
+// Transfer day 3 content to HTML
+$(".day-three-date").html("<h4>" + response.list[16].dt_txt + "</h4>");
+$(".day-three-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[16].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-three-humidity").text("Humidity: " + response.list[16].main.humidity + "%");
+
+// Converts the temp to Kelvin with the below formula
+var tempThree = (response.list[16].main.temp - 273.15) * 1.80 + 32;
+$(".day-three-temp").text("Temp: " + Math.round(tempThree) + " °F");
+
+
+
+});
+
+
 
 // Use the search field
 
