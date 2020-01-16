@@ -22,6 +22,7 @@ $.ajax({
 //code will go here
 // Transfer content to HTML
     $(".city").html("<h1>" + response.name + "</h1>");
+    $(".icon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>");
     $(".wind").text("Wind Speed: " + response.wind.speed + " MPH");
     $(".humidity").text("Humidity: " + response.main.humidity + "%");
     $(".uv").text("UV Index: ");
@@ -29,7 +30,6 @@ $.ajax({
 // Converts the temp to Kelvin with the below formula
 var tempF = (response.main.temp - 273.15) * 1.80 + 32;
 $(".tempF").text("Temperature: " + Math.round(tempF) + " °F");
-
 
 });
 
