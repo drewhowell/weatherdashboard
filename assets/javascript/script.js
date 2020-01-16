@@ -67,6 +67,24 @@ $(".day-three-humidity").text("Humidity: " + response.list[16].main.humidity + "
 var tempThree = (response.list[16].main.temp - 273.15) * 1.80 + 32;
 $(".day-three-temp").text("Temp: " + Math.round(tempThree) + " °F");
 
+// Transfer day 4 content to HTML
+$(".day-four-date").html("<h4>" + response.list[24].dt_txt + "</h4>");
+$(".day-four-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[24].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-four-humidity").text("Humidity: " + response.list[24].main.humidity + "%");
+
+// Converts the temp to Kelvin with the below formula
+var tempFour = (response.list[24].main.temp - 273.15) * 1.80 + 32;
+$(".day-four-temp").text("Temp: " + Math.round(tempFour) + " °F");
+
+// Transfer day 5 content to HTML
+$(".day-five-date").html("<h4>" + response.list[32].dt_txt + "</h4>");
+$(".day-five-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[32].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-five-humidity").text("Humidity: " + response.list[32].main.humidity + "%");
+
+// Converts the temp to Kelvin with the below formula
+var tempFive = (response.list[32].main.temp - 273.15) * 1.80 + 32;
+$(".day-five-temp").text("Temp: " + Math.round(tempFive) + " °F");
+
 
 
 });
