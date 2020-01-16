@@ -16,4 +16,19 @@ i {
 
 .current {
     border: none;
+    width: 100%;
+}
+
+.five-day {
+    border: none;
+    font-size: 24px;
+    width: 100%;
+}
+
+body {
+    background: rgb(0, 162, 255);
+}
+
+.cities {
+    width: 100%;
 }
