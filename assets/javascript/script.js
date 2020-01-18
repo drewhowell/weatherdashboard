@@ -21,7 +21,7 @@ $.ajax({
 
 // Transfer content to HTML
     $(".city").html("<h1>" + response.name + "</h1>");
-    $(".icon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+    $(".icon").html("<img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>");
     $(".wind").text("Wind Speed: " + response.wind.speed + " MPH");
     $(".humidity").text("Humidity: " + response.main.humidity + "%");
     $(".uv").text("UV Index: ");
@@ -41,9 +41,9 @@ $.ajax({
     console.log(response);
 
 // Transfer day 1 content to HTML
-    $(".day-one-date").html("<h4>" + response.list[0].dt_txt + "</h4>");
-    $(".day-one-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
-    $(".day-one-humidity").text("Humidity: " + response.list[0].main.humidity + "%");
+$(".day-one-date").html("<h4>" + response.list[0].dt_txt + "</h4>");
+$(".day-one-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-one-humidity").text("Humidity: " + response.list[0].main.humidity + "%");
 
 // Converts the temp to Kelvin with the below formula
 var tempOne = (response.list[0].main.temp - 273.15) * 1.80 + 32;
@@ -51,7 +51,7 @@ $(".day-one-temp").text("Temp: " + Math.round(tempOne) + " °F");
 
 // Transfer day 2 content to HTML
 $(".day-two-date").html("<h4>" + response.list[8].dt_txt + "</h4>");
-$(".day-two-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[8].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-two-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[8].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 $(".day-two-humidity").text("Humidity: " + response.list[8].main.humidity + "%");
 
 // Converts the temp to Kelvin with the below formula
@@ -60,7 +60,7 @@ $(".day-two-temp").text("Temp: " + Math.round(tempTwo) + " °F");
 
 // Transfer day 3 content to HTML
 $(".day-three-date").html("<h4>" + response.list[16].dt_txt + "</h4>");
-$(".day-three-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[16].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-three-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[16].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 $(".day-three-humidity").text("Humidity: " + response.list[16].main.humidity + "%");
 
 // Converts the temp to Kelvin with the below formula
@@ -69,7 +69,7 @@ $(".day-three-temp").text("Temp: " + Math.round(tempThree) + " °F");
 
 // Transfer day 4 content to HTML
 $(".day-four-date").html("<h4>" + response.list[24].dt_txt + "</h4>");
-$(".day-four-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[24].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-four-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[24].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 $(".day-four-humidity").text("Humidity: " + response.list[24].main.humidity + "%");
 
 // Converts the temp to Kelvin with the below formula
@@ -78,7 +78,7 @@ $(".day-four-temp").text("Temp: " + Math.round(tempFour) + " °F");
 
 // Transfer day 5 content to HTML
 $(".day-five-date").html("<h4>" + response.list[32].dt_txt + "</h4>");
-$(".day-five-icon").html("<img src='http://openweathermap.org/img/w/" + response.list[32].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-five-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[32].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 $(".day-five-humidity").text("Humidity: " + response.list[32].main.humidity + "%");
 
 // Converts the temp to Kelvin with the below formula
