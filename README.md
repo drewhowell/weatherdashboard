@@ -34,5 +34,5 @@ Each day for the 5-Day Forecast displays the following:
 
 ## Images
 
-![Weather Dashboard](assets/images/Screen Shot 2020-01-18 at 6.59.48 AM.png)
+![Weather Dashboard](assets/images/wdashboard.png)
 
