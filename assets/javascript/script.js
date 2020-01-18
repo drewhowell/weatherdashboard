@@ -133,13 +133,16 @@ var searchButton = document.querySelector(".search");
 
 searchButton.addEventListener("click", searchFunction);
 
-searchOutput.textContent = localStorage.getItem("inputcontent");
 
 function searchFunction() {
     localStorage.setItem("inputcontent", searchInput.value);
 
-    searchOutput.textContent = searchInput.textarea.value;
 }
+
+for (var i = 0; i < localStorage.length; i++){
+    $(".output").append("<p>" + localStorage.getItem(localStorage.key(i)) + "</p>");
+}
+
 
 //insert current day
 
