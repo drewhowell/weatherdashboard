@@ -17,12 +17,17 @@ i {
 .current {
     border: none;
     width: 100%;
+    background-color: rgb(41, 245, 245);
+    margin-right: 25px;
 }
 
 .five-day {
     border: none;
     font-size: 24px;
     width: 100%;
+    background-color: rgb(42, 42, 44);
+    color: white;
+    margin-right: 25px;
 }
 
 body {
@@ -31,4 +36,25 @@ body {
 
 .cities {
     width: 100%;
+    width: 100%;
+    background-color: rgb(42, 42, 44);
+    color: white;
+    margin-bottom: 25px;
+}
+
+.forecast {
+    background-color: rgba(29, 29, 158, 0.719);
+    color: white;
+    margin-bottom: 25px;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    line-height: 60px;
+    background-color: rgb(42, 42, 44);
+    color: white;
+    text-align: center;
+    font-size: 14px;
 }
