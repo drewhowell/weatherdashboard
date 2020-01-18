@@ -24,11 +24,33 @@ $.ajax({
     $(".icon").html("<img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>");
     $(".wind").text("Wind Speed: " + response.wind.speed + " MPH");
     $(".humidity").text("Humidity: " + response.main.humidity + "%");
-    $(".uv").text("UV Index: ");
 
 // Converts the temp to Kelvin with the below formula
 var tempF = (response.main.temp - 273.15) * 1.80 + 32;
 $(".tempF").text("Temperature: " + Math.round(tempF) + " °F");
+
+
+var lon = response.coord.lon;
+var lat = response.coord.lon;
+var queryURLUv = "https://api.openweathermap.org/data/2.5/uvi?" + "lat=" + lat + "&lon=" + lon + APIKey;
+
+
+//get uv index
+
+$.ajax({
+    url: queryURLUv,
+    method: "GET"
+})// We store all of the retrieved data inside of an object called "response"
+.then(function(response) {
+    console.log(queryURL);
+    console.log(response);
+
+    //transfer content to HTML
+    $(".uv").text("UV Index: " + response.value);
+
+
+});
+
 
 });
 
@@ -106,3 +128,17 @@ function searchFunction() {
 
     searchOutput.textContent = searchInput.textarea.value;
 }
+
+//insert current day
+
+var currentDay = moment().format("dddd, MMMM Do");
+
+function insertCurrentDay() {
+    $(".current-date").text(currentDay);
+};
+
+insertCurrentDay();
+
+console.log(currentDay);
+
+
