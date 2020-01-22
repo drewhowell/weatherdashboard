@@ -1,7 +1,7 @@
 // This is our API key
 
 var APIKey = "&appid=a1e01b951a95042a50e99d7d3222a66d";
-var city = localStorage.getItem("inputcontent");
+var city = localStorage.getItem("lastresult");
 
 
 // Here we are building the URL we need to query the database
@@ -135,14 +135,19 @@ searchButton.addEventListener("click", searchFunction);
 
 
 function searchFunction() {
-    localStorage.setItem("inputcontent", searchInput.value);
+    localStorage.setItem("inputcontent-" + searchInput.value, searchInput.value);
+    localStorage.setItem("lastresult", searchInput.value);
 
 }
 
 for (var i = 0; i < localStorage.length; i++){
-    $(".output").append("<p>" + localStorage.getItem(localStorage.key(i)) + "</p>");
+    $(".output").append("<p class='cityresult'>" + localStorage.getItem(localStorage.key(i)) + "</p>");
 }
 
+
+//link previous search results to search again
+
+//code goes here
 
 //insert current day
 
